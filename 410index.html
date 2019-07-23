@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>流程控制语句</title>
+	<script>
+		// 第一步把之前的数据写在一个数组的形式，定义变量为infos
+		var infos=new Array();
+		infos=[
+		['小A','女',21,'大一'],
+		['小B','男',23,'大三'],
+		['小C','男',24,'大四'],
+		['小D','女',21,'大一'],
+		['小E','女',22,'大四'],
+		['小F','男',21,'大一'],
+		['小G','女',22,'大二'],
+		['小H','女',20,'大三'],
+		['小I','女',20,'大一'],
+		['小J','男',20,'大三']
+		];
+
+		// 第一次筛选，找出都是大一的信息
+		
+		var i,j;
+		document.write("所有学生的信息：<br/>");
+		for(i=0;i<infos.length;i++){
+			document.write(infos[i]+"<br/>");
+		}
+
+
+		document.write("第一次筛选，找出都是大一的信息<br/>");
+		// document.write(infos.length);
+		// document.write(infos[1].length);
+		// document.write(infos[0][3]);
+		for(i=0;i<infos.length;i++){
+			if(infos[i][3]=='大一'){
+				for(j=0;j<infos[i].length;j++){
+					document.write(infos[i][j]+"; ");				
+				}
+			document.write("<br/>");
+			}			
+		}
+
+		// 第二次筛选，找出都是女的信息
+		document.write("第二次筛选，找出都是女的信息<br/>");
+		for(i=0;i<infos.length;i++){
+			if(infos[i][1]=='女'){
+				for(j=0;j<infos[i].length;j++){
+					document.write(infos[i][j]+"; ");				
+				}
+			document.write("<br/>");
+			}			
+		}
+
+
+	document.write("另一人的程序AAAAAA：<br/>")
+	for(var i=0;i<infos.length;i++){
+		switch(infos[i][3]){
+			case "大一":
+			switch(infos[i][1]){
+				case "女":
+				document.write("女大一学生:"+infos[i][0]+"<br>")
+				break;
+			}
+			break;
+		}
+	}
+
+	document.write("另一人的程序BBBBB：<br/>")
+	var arr=new Array();
+   		var n=0;
+   		    p=0;
+   		    t=0;
+   		    document.write('第一次'+'<br />')
+   		for(i=0;i<infos.length;i++){
+   			if(infos[i][3]=='大一'){
+   				document.write(infos[i]+'<br>');
+   				arr[n]=infos[i];
+   				n++;
+   			}
+   		}
+   		document.write("<hr color='crimson' />")
+   		document.write("第二次"+'<br />');
+   		for(n=0;n<arr.length;n++){
+   			if(arr[n][1]=='女'){
+   				document.write(arr[n]+'<br />');
+   				arr[p]=infos[n];
+   				p++;
+   			}
+   		}
+   		document.write("<hr color='crimson' />")
+   		document.write("第三次"+'<br />');
+   		for(p=0;p<arr.length;p++){
+   			if(arr[p][2]=='21'){
+   				document.write(arr[p]+'<br />');
+   				arr[t]=infos[p];
+   				t++;
+   			}
+   		}
+   		document.write("<hr color='crimson' />")
+   		document.write('第四次'+'<br />');
+   		for(t=0;t<arr.length;t++){
+   			if(arr[t][0]=='小D'){
+   				document.write(arr[t]);
+   			}
+   		}
+
+
+	document.write("另一人的程序BBBBB：<br/>");
+	//第一次筛选，找出都是大一的信息
+	 var dy=[],j=0,g=[],k=0;
+	 for(var i=0;i<infos.length;i++){
+	    if(infos[i][3]=='大一'){ 
+	        dy[j] = infos[i][1];
+	        if(dy[j]=='女'){
+	            g[k] = infos[i][0];
+	            k++;
+	        }
+	        j++;
+	    }
+
+	 }
+	 //document.write(infos[0][3]); 
+	 //第二次筛选，找出都是女生的信息
+	 document.write(dy+'<br/>'); 
+	 document.write(g.join('<br/>'));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
