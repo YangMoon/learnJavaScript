@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>卸载事件</title>
+	<script type="text/javascript">   
+	     window.onunload = onunload_message;   
+	     function onunload_message(){   
+	        alert("您确定离开该网页吗？");   
+	    }   
+	</script> 
+</head>
+<body onunload="message();">
+	 欢迎学习JavaScript。
+	 <br/>注意：不同浏览器对onunload事件支持不同。
+</body>
+</html>
