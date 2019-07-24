@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时器setTimeout()</title>
+	<script>
+		setTimeout("alert('Hello')",3000);
+		function tinfo(){
+			var t=setTimeout("alert('Hello')",5000);
+		}
+
+		var num=0,i;
+		function numCount(){
+			document.getElementById('txt').value=num;
+			num+=1;
+			i=setTimeout("numCount()",1000);
+		}
+		function stopCount(){
+			clearTimeout(i);
+		}
+	</script>
+</head>
+<body>
+	<form action="">
+		<input type="button" value="5秒后弹出Hello" onclick="tinfo()">
+		<input type="text" id="txt" >
+		<input type="button" value="开始无限循环计数" onclick="numCount()">
+		<input type="button" value="停止计数" onclick="stopCount()">
+	</form>
+</body>
+</html>

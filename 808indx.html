@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编程练习</title>
+</head>
+<body>
+	<!--先编写好网页布局-->
+  <h1>操作成功</h1>
+  <span id="second">5</span>秒后回到主页 <a href="javascript.back();">返回</a>
+  <br/><br/><br/>
+ 
+  <script type="text/javascript">  
+ 
+   //获取显示秒数的元素，通过定时器来更改秒数。
+   var num=document.getElementById("second").innerHTML;
+
+   function count(){
+   	num--;
+   	document.getElementById('second').innerHTML=num;
+   	if(num==0){
+   		location.assign('http://www.imooc.com');
+   	}
+   	// document.write("ok");
+   }   
+   	setInterval("count();",1000);
+   //通过window的location和history对象来控制网页的跳转。
+   function back(){
+   	window.history.back();
+   }
+ </script> 
+	制作一个跳转提示页面：<br>
+
+要求：<br>
+
+1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。<br>
+
+2. 如果点击“返回”按钮则返回前一个页面。<br>
+</body>
+</html>

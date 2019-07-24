@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>window对象</title>
+	<script>
+		// 计时器setInterval()
+		// 在执行时,从载入页面后每隔指定的时间执行代码。
+		// 语法:setInterval(代码,交互时间);
+		var attime;
+		function clock(){
+			var time=new Date();
+    		attime=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+			document.getElementById("clock").value=attime;
+		}
+		setInterval(clock,1000);
+	</script>
+</head>
+<body>
+	<input type="text" id="clock" size="50"  />
+</body>
+</html>
