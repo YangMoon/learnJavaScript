@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取年份 星期</title>
+	<script>
+		// var mydate=new Date(2020,10,1);
+		// document.write("日期"+Update.getDate());
+		var mydate=new Date();
+		document.write(mydate+"<br/>");
+		var myyear=mydate.getFullYear();
+		// Udate.setDate(2020,10,1);
+		document.write("年份是："+myyear+"<br/>");
+		// document.write("日期是："+mydate.getYear()+"<br/>");
+		
+		var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		document.write("今天是："+weekday[mydate.getDay()]+"<br/>");
+		document.write("当前时间："+mydate+"<br/>");
+		mydate.setTime(mydate.getTime()+60*60*1000);
+		document.write("推迟一小时时间："+mydate);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

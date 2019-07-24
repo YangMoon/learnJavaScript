@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>String字符对象</title>
+	<script>
+		var mystr="I love JavaScript!";
+		var mychar=mystr.toUpperCase();
+		var mylength=mystr.length;
+
+		document.write(mystr+"<br/>");
+		document.write(mychar+"<br/>");
+		document.write(mylength+"<br/>");
+		
+		document.write("***********************<br/>");
+		document.write(mystr.charAt(3)+"<br/>");
+		document.write(mystr.indexOf("I")+"<br/>");
+		document.write(mystr.indexOf("v")+"<br/>");
+		document.write(mystr.indexOf("v",8)+"<br/>");
+
+		document.write("***********************<br/>");
+		document.write("split(separator,limit)"+"<br/>");
+		var mystr1="www.imooc.com";
+		document.write(mystr1+"<br/>");
+		document.write(mystr1.split(".")+"<br/>");
+		document.write(mystr1.split(".",2)+"<br/>");
+		document.write(mystr1.split("")+"<br/>");
+		document.write(mystr1.split("",5)+"<br/>");
+
+		document.write("***********************<br/>");
+		document.write("substring(startPos,stopPos) <br/>");
+		document.write(mystr.substring(7)+"<br/>");
+		document.write(mystr.substring(2,6)+"<br/>");
+
+		document.write("***********************<br/>");
+		document.write("substr(startPos,length)"+"<br/>");
+		document.write(mystr.substr(7)+"<br/>");
+		document.write(mystr.substr(2,4)+"<br/>");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array 数组对象</title>
+	<script>
+		var mya = new Array(3);
+		mya[0] = "1";
+		mya[1] = "2";
+		mya[2] = "3";
+		document.write("数组连接concat()<br/>");
+		document.write("语法:arrayObject.concat(array1,array2,...,arrayN)<br/>");
+		document.write("参数说明:rray1 要连接的第一个数组……<br/>");
+		document.write("mya.concat(4,5)="+mya.concat(4,5)+"<br/>");
+		document.write("mya="+mya+"<br/>");
+
+		var mya1= new Array("hello!")
+		var mya2= new Array("I","love");
+		var mya3= new Array("JavaScript","!");
+		var mya4=mya1.concat(mya2,mya3);
+		document.write(mya4);
+		document.write("***********************<br/>");
+
+		document.write("指定分隔符连接数组元素join()<br/>");
+		document.write("语法:arrayObject.join(分隔符)<br/>");
+		document.write("参数说明:separator 可选。指定要使用的分隔符。如查省略该参数，则使用逗号作为分隔符<br/>");
+		var myarr = new Array(3);
+		myarr[0] = "I";
+		myarr[1] = "love";
+		myarr[2] = "JavaScript";
+		document.write(myarr.join()+"<br/>");
+		document.write(myarr.join(".")+"<br/>");
+		document.write("***********************<br/>");
+
+		document.write("颠倒数组元素顺序reverse() 用于颠倒数组中元素的顺序。<br/>");
+		document.write("语法:arrayObject.reverse()<br/>");
+		document.write("注意：该方法会改变原来的数组，而不会创建新的数组。<br/>");
+		var myarrB = new Array(3);
+		myarrB[0] = "1";
+		myarrB[1] = "2";
+		myarrB[2] = "3";
+		document.write(myarrB + "<br />");
+		document.write(myarrB.reverse()+ "<br />");
+		document.write("***********************<br/>");
+
+		document.write("选定元素slice() 方法可从已有的数组中返回选定的元素。<br/>");
+		document.write("语法:arrayObject.slice(start,end)<br/>");
+		document.write("参数说明：start 必需；end 可选。<br/>");
+		var myarrC = new Array(1,2,3,4,5,6);
+		document.write(myarrC + "<br>");
+		document.write(myarrC.slice(2,4) + "<br>");
+		document.write(myarrC+"<br/>");
+		document.write("***********************<br/>");
+
+		document.write("数组排序sort() )方法使数组中的元素按照一定的顺序排列。<br/>");
+		document.write("语法:arrayObject.sort(方法函数) <br/>");
+		document.write("参数说明：方法说明 可选。规定排序顺序。<br/>");
+		document.write("注意: 该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下："+
+		"若返回值<=-1，则表示 A 在排序后的序列中出现在 B 之前。"+
+		"若返回值>-1 && <1，则表示 A 和 B 具有相同的排序顺序。"+
+		"若返回值>=1，则表示 A 在排序后的序列中出现在 B 之后。"+"<br/>");
+		var myarrC = new Array("Hello","John","love","JavaScript"); 
+		var myarrD = new Array("80","16","50","6","100","1");
+		document.write(myarrC.sort()+"<br>");
+		document.write(myarrD.sort());
+		document.write("***********************<br/>");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
