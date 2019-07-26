@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插入节点appendChild()</title>
+	<style>
+		.message{
+			width:200px;
+			height:100px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<ul id="test">
+		<li>JavaScript</li>
+		<li>HTML</li>
+		<li>child</li>
+	</ul> 
+	<!-- <div id="test">
+		<p id="x1">HTML</p>
+		<p>JavaScript</p>	
+	</div> -->
+	<script>
+		var x=document.getElementById("test");
+		var y=document.createElement("li");
+		y.innerHTML="This is a new p";
+		// x.appendChild(y);
+		// x.insertBefore(y,x.childNodes[3]);
+		// x.removeChild(x.childNodes[1]);
+		x.replaceChild(y,x.childNodes[1]);
+
+		// 添加元素
+		var body=document.body;
+		var input=document.createElement("input");
+		input.type="button";
+		input.value="创建一个按钮";
+		body.appendChild(input);
+
+		var btn2=document.createElement("input");
+		btn2.setAttribute("type","text");
+		btn2.setAttribute("name","q");
+		btn2.setAttribute("value","使用setAttribute");
+		btn2.setAttribute("onclick","javascript:alert('this is a text!');");
+		body.appendChild(btn2);
+
+		// 创建文本节点createTextNode
+		var element=document.createElement("div");
+		element.className="message";
+		var textNode=document.createTextNode("Hello World!");
+		element.appendChild(textNode);
+		document.body.appendChild(element);
+	</script>
+</body>
+</html>

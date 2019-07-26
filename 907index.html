@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>childNodes()</title>
+</head>
+<body>
+	<div>
+		javascript
+		<p>javascript</p>
+		<div>jQuery</div>
+		<h5>PHP</h5>
+	</div>
+	<script>
+		var myNode=document.getElementsByTagName("div")[0].childNodes;
+		// document.write("第一个了节点的属性"+myNode.firstChild.nodeType+"<br/>");
+		document.write("节点值	名称		属性 <br/?")
+		for(var i=0;i<myNode.length;i++){
+			document.write(myNode[i].nodeValue+"	");
+			document.write(myNode[i].nodeName+"	");
+			document.write(myNode[i].nodeType+"<br/>");
+		}
+		// document.write(myNode.firstChild.nodeType+"<br/>");
+		// document.write("第一个了节点的属性"+myNode.lastChild.nodeType+"<br/>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getAttribute()</title>
+</head>
+<body>
+	<h1 id="alink" title="getAttribute()" onclick="hattr()">点击我，获取标签的属性值</h1>
+	<script>
+		function hattr(){
+			var anode=document.getElementById('alink');
+			var attr1=anode.getAttribute("id");
+			var attr2=anode.getAttribute('title');
+			document.write("h1标签的ID :"+attr1+"<br/>");
+			document.write("h1标签的title :"+attr2+"<br/>");
+		}
+	</script>
+
+	<p id="intro">我的课程</p>  
+  <ul>  
+    <li title="JS">JavaScript</li>  
+    <li title="JQ">JQuery</li>  
+    <li title="">HTML/CSS</li>  
+    <li title="JAVA">JAVA</li>  
+    <li title="">PHP</li>  
+  </ul>  
+  <h1>以下为li列表title的值,当title为空时，新设置值为"WEB前端技术":</h1>
+  <script>
+  	var Lists=document.getElementsByTagName("li");
+  	document.write('ok');
+  	for(var i=0;i<Lists.length;i++){
+  		var text=Lists[i].getAttribute("title");
+  		if(text==""){
+  			Lists[i].setAttribute("title","WEB前端技术");
+  			document.write(Lists[i].getAttribute('title')+'<br/>');
+  		}else{
+  			document.write(text+"<br/>");
+  		}
+  		// if(text==""){
+  		// 	Lists[i].setAttribute("title","WEB前端技术");
+  		// 	document.write(Lists[i].getAttribute("title")+"<br/>");
+  		// 	continue;
+  		// }
+  		// document.write(text+"<br/>");
+  	}
+  </script>
+</body>
+</html>
